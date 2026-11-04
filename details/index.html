@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf8f2">
+  <title>Wedding Details</title>
+  <style>
+    :root{--sage:#929b83;--ink:#3f473d;--paper:#fbf8f2;--gold:#b39b70;--line:#ded8cc;--muted:#747969}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;padding:28px 18px 48px;background:radial-gradient(ellipse at top,#f4eee4 0,transparent 58%),var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+    .page{width:min(100%,900px);margin:0 auto}
+    .hero{text-align:center;padding:36px 16px 26px}
+    .eyebrow,.section-label,.event-meta,.detail-label{font:10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--sage)}
+    .eyebrow{margin:0}
+    h1{font-weight:400;font-size:clamp(42px,8vw,72px);line-height:1.05;margin:16px 0 10px}
+    .subtitle{font-size:18px;color:var(--gold);margin:0}
+    .city{margin:16px 0 0;font:11px Arial,sans-serif;letter-spacing:.13em;color:var(--muted)}
+    .events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:18px 0}
+    .event{padding:clamp(24px,4vw,38px);border:1px solid var(--line);background:#fffdf9e8;box-shadow:0 14px 44px #59614c12;display:flex;flex-direction:column;align-items:flex-start}
+    .section-label{margin:0 0 13px}
+    h2{font-size:clamp(27px,4vw,34px);font-weight:400;margin:0 0 22px}
+    .event-meta{letter-spacing:.1em;color:var(--muted);line-height:1.8;margin:0 0 20px}
+    .venue{font-size:21px;line-height:1.35;margin:0 0 8px}
+    .address{font:14px/1.7 Arial,sans-serif;color:var(--muted);margin:0}
+    .details{width:100%;display:grid;gap:14px;margin:23px 0 26px;padding-top:19px;border-top:1px solid #ebe6dc}
+    .detail{display:grid;gap:5px}
+    .detail-label{font-size:9px;letter-spacing:.15em}
+    .detail-value{font-size:15px;line-height:1.45}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:12px 17px;background:var(--sage);border:1px solid var(--sage);color:#fff;text-decoration:none;font:10px Arial,sans-serif;letter-spacing:.12em}
+    .button.secondary{background:transparent;color:var(--ink)}
+    .countdown{max-width:500px;margin:24px auto;padding:20px 18px;background:#e9ede3b8;border:1px solid #d9dfd0;text-align:center}
+    .countdown-label{margin:0;color:#657553;font:9px Arial,sans-serif;letter-spacing:.18em}
+    .countdown-row{display:flex;justify-content:center;gap:clamp(14px,4vw,32px);margin-top:15px}
+    .countdown-unit{display:grid;gap:6px;min-width:45px}
+    .countdown-unit strong{font:400 clamp(26px,6vw,38px)/1 Georgia,'Times New Roman',serif;font-variant-numeric:tabular-nums}
+    .countdown-unit span{font:9px Arial,sans-serif;letter-spacing:.12em;color:#657553}
+    .footer{text-align:center;margin:29px 0 0}
+    .footer p{font-size:16px;color:var(--muted);margin:0 0 17px}
+    @media(max-width:650px){body{padding:12px 14px 34px}.hero{padding:28px 8px 14px}.events{grid-template-columns:1fr;gap:13px}.event{padding:25px}.footer{margin-top:22px}}
+  </style>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">With joy and gratitude</p>
+      <h1 id="weddingTitle">Miza weds Masoom</h1>
+      <p class="subtitle">We would be honoured by your presence</p>
+      <p class="city" id="city"></p>
+    </header>
+    <section class="events" id="events" aria-label="Wedding events"></section>
+    <section class="countdown" id="countdown" aria-label="Countdown to the wedding">
+      <p class="countdown-label">COUNTING DOWN TO THE WEDDING</p>
+      <div class="countdown-row" aria-live="off">
+        <div class="countdown-unit"><strong id="days">000</strong><span>DAYS</span></div>
+        <div class="countdown-unit"><strong id="hours">00</strong><span>HOURS</span></div>
+        <div class="countdown-unit"><strong id="minutes">00</strong><span>MINUTES</span></div>
+        <div class="countdown-unit"><strong id="seconds">00</strong><span>SECONDS</span></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>Your presence and prayers mean the world to us.</p>
+      <a class="button secondary" href="../envelope/">BACK TO INVITATION</a>
+    </footer>
+  </main>
+<script>
+(async()=>{
+  const d=await fetch('../data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Could not load invitation data');return r.json()});
+  const w=d.wedding||{},c=d.couple||{},events=[w.ceremony].filter(Boolean);
+  const title=c.weddingTitle||`${c.partnerTwo||'Miza'} weds ${c.partnerOne||'Masoom'}`;
+  document.title=`Wedding Details · ${title}`;
+  document.querySelector('#weddingTitle').textContent=title;
+  document.querySelector('#city').textContent=w.city||'';
+  const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));
+  document.querySelector('#events').innerHTML=events.map((event,index)=>{
+    const arrival=event.guestArrivalTime&&!event.guestArrivalTimeTentative?event.guestArrivalTime:event.guestArrivalTime?`${event.guestArrivalTime} (tentative)`:'';
+    const extra=[
+      event.guestArrivalTime?['Guest arrival',arrival]:null,
+      event.dressCode?['Dress code',event.dressCode]:null,
+      event.guestColorTheme?['Guest colour theme',event.guestColorTheme]:null,
+      event.parkingInstructions&&!event.parkingInstructions.startsWith('[')?['Parking',event.parkingInstructions]:null,
+      event.instructions&&!event.instructions.startsWith('[')?['Notes',event.instructions]:null
+    ].filter(Boolean);
+    const map=event.mapsUrl&&!event.mapsUrl.startsWith('[')?`<a class="button" href="${escapeHtml(event.mapsUrl)}" target="_blank" rel="noopener">OPEN MAP</a>`:'';
+    return `<article class="event"><p class="section-label">${index===0?'Ceremony':'Celebration'}</p><h2>${escapeHtml(event.title)}</h2><p class="event-meta">${escapeHtml(event.date||w.displayDate)}${event.time?` · ${escapeHtml(event.time)}${event.timeTentative?' (tentative)':''}`:''}</p><p class="venue">${escapeHtml(event.venue)}</p><p class="address">${escapeHtml(event.address)}</p><div class="details">${extra.map(([label,value])=>`<div class="detail"><span class="detail-label">${escapeHtml(label)}</span><span class="detail-value">${escapeHtml(value)}</span></div>`).join('')}</div><div class="actions">${map}${index===events.length-1?'<a class="button secondary" href="../rsvp/">RSVP</a>':''}</div></article>`;
+  }).join('');
+  const countdown=document.querySelector('#countdown'),target=new Date(w.date||d.design?.countdown?.targetDate||'').getTime();
+  if(d.features?.countdownDisplay===false||d.design?.countdown?.enabled===false||!Number.isFinite(target))countdown.hidden=true;
+  else{
+    const updateCountdown=()=>{
+      const remaining=Math.max(0,target-Date.now());
+      document.querySelector('#days').textContent=String(Math.floor(remaining/86400000)).padStart(3,'0');
+      document.querySelector('#hours').textContent=String(Math.floor(remaining%86400000/3600000)).padStart(2,'0');
+      document.querySelector('#minutes').textContent=String(Math.floor(remaining%3600000/60000)).padStart(2,'0');
+      document.querySelector('#seconds').textContent=String(Math.floor(remaining%60000/1000)).padStart(2,'0');
+    };
+    updateCountdown();setInterval(updateCountdown,1000);
+  }
+})().catch(error=>{console.error('Could not load details page data',error);document.querySelector('#city').textContent='Please refresh to view the wedding details.'});
+</script>
+<script src="../assets/share.js" defer></script>
+</body>
+</html>
