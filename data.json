@@ -1,0 +1,218 @@
+{
+  "couple": {
+    "partnerOne": "Mohammad Masoom",
+    "partnerTwo": "Miza Zafirah",
+    "displayNames": "Miza & Masoom",
+    "weddingTitle": "Miza & Masoom",
+    "initials": "M · M",
+    "intro": "Assalamu’alaikum Warahmatullahi Wabarakatuh\n\nAlhamdulillahi Rabbil ‘Alamin.\n\nWith the grace and blessings of Allah SWT and the love and du'a of our beloved families, we are delighted to invite you to celebrate the blessed union of Miza & Masoom.\n\nAs we embark on this sacred journey of marriage, united in love, faith, and devotion, we pray that Allah SWT blesses our union with Sakinah, Mawaddah and Rahmah.\n\nYour presence, heartfelt du'a and blessings would bring immense joy to our special day.\n\nBarakallahu Feekum.\n\nMay Allah SWT bless us all with His endless mercy and barakah.",
+    "contacts": [
+      {
+        "name": "Miza",
+        "phone": "019-6109987",
+        "whatsappUrl": "https://wa.me/60196109987"
+      },
+      {
+        "name": "Masoom",
+        "phone": "017-6007460",
+        "whatsappUrl": "https://wa.me/60176007460"
+      }
+    ],
+    "parentsNames": "[To confirm]"
+  },
+  "wedding": {
+    "date": "2026-12-12T08:00:00+08:00",
+    "displayDate": "12 December 2026",
+    "day": "Saturday",
+    "ordinalDate": "12th",
+    "month": "December",
+    "year": "2026",
+    "time": "8:00 AM",
+    "timeZone": "Asia/Kuala_Lumpur",
+    "rsvpDeadline": "[To confirm]",
+    "city": "Putrajaya, Malaysia",
+    "ceremony": {
+      "title": "Akad Nikah",
+      "date": "12 December 2026",
+      "time": "8:00 AM",
+      "guestArrivalTime": "7:30 AM",
+      "guestArrivalTimeTentative": true,
+      "venue": "Masjid Putra",
+      "address": "Presint 1, 62000 Putrajaya, Malaysia",
+      "dressCode": "Traditional (Off White)",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Masjid+Putra+Putrajaya",
+      "instructions": "[To confirm]"
+    },
+    "reception": {
+      "title": "Wedding Reception / Walimatulurus",
+      "date": "12 December 2026",
+      "dateConfirmed": true,
+      "time": "7:00 PM - 11:00 PM",
+      "startTime": "19:00",
+      "endTime": "23:00",
+      "timeTentative": true,
+      "venue": "The Glass Suite by Bora Ombak",
+      "address": "1, Jalan P5/5, Presint 5, 62200 Putrajaya, Wilayah Persekutuan Putrajaya",
+      "dressCode": "Traditional or Formal",
+      "guestColorTheme": "Champagne",
+      "mapsUrl": "https://maps.app.goo.gl/ewANdPU4Fst2CbKX7",
+      "parkingInstructions": "[To confirm]",
+      "instructions": "[To confirm]"
+    },
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Masjid+Putra+Putrajaya"
+  },
+  "rsvp": {
+    "enabled": true,
+    "deadline": "[To confirm]",
+    "formUrl": "[RSVP form URL to be added]",
+    "separateEventRSVP": true,
+    "events": [
+      {
+        "id": "wedding-reception",
+        "title": "Wedding",
+        "date": "2026-12-12",
+        "time": "19:00",
+        "timeTentative": true
+      }
+    ],
+    "guestFullNameRequired": true,
+    "attendanceOptions": [
+      "Attending",
+      "Unable to attend"
+    ],
+    "allocatedGuestCount": 2,
+    "childrenAllowed": true,
+    "childrenIncludedInGuestCount": "[To confirm]",
+    "extraGuestsRequireApproval": true,
+    "mealPreferences": "[To confirm]",
+    "contactNumberRequired": false,
+    "guestMessageEnabled": true,
+    "guestMessagePlaceholder": "Leave your wishes and du'a for the couple",
+    "confirmationMessage": "We’d love to celebrate with everyone, but as seating is limited, we kindly ask you to follow your allocated guest count. If you’d like to bring someone extra, please let us know early, and we’ll do our best to accommodate. Thank you for your love and understanding!",
+    "appsScriptUrl": "https://script.google.com/macros/s/AKfycbzeuwnu8kxjlzHbwIYZmQOvfh8F24wuelnG-vNOYvQ8U9taMMywhq3AMaH7COxn-ZrdtA/exec",
+    "whatsappConfirmationEnabled": true,
+    "maxGuestCount": 10
+  },
+  "design": {
+    "envelopeKicker": "A LITTLE NOTE FOR YOU",
+    "openPrompt": "CLICK TO OPEN",
+    "language": "Bilingual",
+    "languageOptions": [
+      "English",
+      "Bahasa Melayu"
+    ],
+    "style": [
+      "Elegant",
+      "Romantic",
+      "Minimalist"
+    ],
+    "colorSage": "#A5AD96",
+    "colorRose": "#DFA6B0",
+    "colorPaper": "#FFF9F5",
+    "colorWhite": "#FFFFFF",
+    "colorIvory": "#FFFFF0",
+    "colorChampagne": "#F7E7CE",
+    "floralDecoration": "Soft pink and white flowers",
+    "backgrounds": {
+      "envelope": {
+        "image": "assets/water-lilies-envelope.jpeg",
+        "opacity": 0.55,
+        "blurPx": 4,
+        "washOpacity": 0.0
+      },
+      "opened": {
+        "image": "assets/water-lilies-opened.jpeg",
+        "opacity": 0.55,
+        "blurPx": 5,
+        "washOpacity": 0.0
+      }
+    },
+    "backgroundMusic": {
+      "enabled": true,
+      "track": "[To confirm]",
+      "audioUrl": "[To confirm]",
+      "autoplay": false,
+      "showMusicToggle": true
+    },
+    "countdown": {
+      "enabled": true,
+      "targetDate": "2026-12-12T08:00:00+08:00",
+      "title": "Counting Down to Our Forever"
+    }
+  },
+  "images": {
+    "flowerSpray": "assets/floral-spray.webp",
+    "anthuriums": "assets/anthurium-pair.webp",
+    "hand": "assets/IMG_2499.JPG",
+    "location": "assets/masjid-putra-location.svg",
+    "couple": "assets/IMG_2244.JPG",
+    "envelopeCover": "assets/IMG_2502.JPG",
+    "engagement": "assets/IMG_2496.JPG",
+    "envelopeLiner": "assets/IMG_2496.JPG",
+    "envelopeBackground": "assets/water-lilies-envelope.jpeg",
+    "openedBackground": "assets/water-lilies-opened.jpeg",
+    "sharePreview": "assets/og-image.jpg"
+  },
+  "gallery": [
+    {
+      "src": "assets/IMG_2244.JPG",
+      "alt": "Miza and Masoom - Wedding Gallery 1",
+      "caption": "[To confirm]"
+    },
+    {
+      "src": "assets/IMG_2496.JPG",
+      "alt": "Miza and Masoom - Wedding Gallery 2",
+      "caption": "[To confirm]"
+    },
+    {
+      "src": "assets/IMG_2497.JPG",
+      "alt": "Miza and Masoom - Wedding Gallery 3",
+      "caption": "[To confirm]"
+    }
+  ],
+  "features": {
+    "whatsappContact": {
+      "enabled": true,
+      "contacts": [
+        {
+          "name": "Miza",
+          "url": "https://wa.me/60196109987"
+        },
+        {
+          "name": "Masoom",
+          "url": "https://wa.me/60176007460"
+        }
+      ]
+    },
+    "addToCalendar": {
+      "enabled": true,
+      "events": [
+        {
+          "title": "Miza & Masoom - Akad Nikah",
+          "start": "2026-12-12T08:00:00+08:00",
+          "end": "[To confirm]",
+          "location": "Masjid Putra, Putrajaya"
+        },
+        {
+          "title": "Miza & Masoom - Wedding Reception",
+          "start": "2026-12-12T19:00:00+08:00",
+          "end": "2026-12-12T23:00:00+08:00",
+          "timeTentative": true,
+          "location": "The Glass Suite by Bora Ombak, Putrajaya"
+        }
+      ]
+    },
+    "googleMapsDirections": {
+      "enabled": true,
+      "showSeparateVenueButtons": true
+    },
+    "countdownDisplay": true,
+    "giftAndWishes": {
+      "enabled": true,
+      "guestWishesEnabled": true,
+      "giftDetails": "[To confirm]"
+    },
+    "separateEventRSVP": true,
+    "closingMessage": "Your presence and prayers mean the world to us."
+  }
+}
