@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Illustration of a mosque">
+  <rect width="600" height="400" fill="#f3eee5"/>
+  <path d="M0 340h600v60H0z" fill="#dce1d1"/>
+  <path d="M98 330V200h404v130" fill="#fffaf4" stroke="#89947c" stroke-width="7"/>
+  <path d="M80 205h440l-22-24H102z" fill="#d8b27a" stroke="#89947c" stroke-width="6"/>
+  <path d="M235 180c0-45 29-78 65-78s65 33 65 78" fill="#d9aaa7" stroke="#89947c" stroke-width="7"/>
+  <path d="M300 102V78m-10 12h20" stroke="#b89b68" stroke-width="6" stroke-linecap="round"/>
+  <path d="M112 181V94h34v87m-43-87h52l-26-35zM454 181V94h34v87m-43-87h52l-26-35z" fill="#d9aaa7" stroke="#89947c" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M128 330v-78c0-23 18-42 40-42s40 19 40 42v78m184 0v-78c0-23 18-42 40-42s40 19 40 42v78" fill="#e9e6db" stroke="#89947c" stroke-width="6"/>
+  <path d="M270 330v-73c0-17 13-31 30-31s30 14 30 31v73" fill="#dce1d1" stroke="#89947c" stroke-width="6"/>
+  <path d="M0 346c88-24 169-28 248-12 92 19 183 20 352-9" fill="none" stroke="#a5ad96" stroke-width="7"/>
+</svg>
